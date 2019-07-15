@@ -1,0 +1,57 @@
+/*******************************/
+/* Author: BQool */
+/* for email preview page */
+/*******************************/
+body {margin: 0px; padding: 0px; background:#ffffff; font-size: 13px; line-height:20px; font-family: 'Roboto', Arial, Tahoma, 'PingFangSC-Light', 'hiragino sans gb', 'microsoft yahei ui', 'microsoft yahei', '微軟正黑體', sans-serif;}
+.clear:before, .clear:after {clear: both; content: ''; display: block; line-height: 0px; font-size: 0px; height: 0px;}
+button {background: none; padding: 0px; line-height: 21px;}
+input[type="button"], input[type="submit"], button {cursor: pointer; box-sizing: content-box; font-size: 13px; padding: 0px;}
+
+/* scrollbar for chrome and safari */
+::-webkit-scrollbar {width:12px; height: 12px; background-color:#fff}
+::-webkit-scrollbar-thumb {width:6px; background-color:#d7d7d7; border:3px solid #fff; -webkit-border-radius:6px; border-radius:6px}
+::-webkit-scrollbar-thumb:hover {background-color:#a6a6a6}
+::-webkit-scrollbar-button {/* display:none; */}
+
+.r_float {float: right;}
+.l_float {float: left;}
+.flex {display: flex; display: -webkit-flex; flex-wrap: wrap; -webkit-flex-wrap: wrap; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify;  justify-content: space-between;}
+
+.button02 {background: #3d566e; border: 0px; color: #ffffff; font-size: 14px; padding: 8px 30px; border-radius:3px; margin: 0px 5px; text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25); box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.1); display: inline-block; text-decoration: none;}
+.button02:hover { background: #0066b7; color: #ffffff;}
+.button04, .button04:hover {background: #cfcfcf; border: 0px; box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.1); color: #ffffff; font-size: 14px; padding: 8px 15px; border-radius:3px; margin: 0px 5px;} /* cancel */
+.button02:focus, .button04:focus {outline: none; box-shadow: none;}
+
+.button_area02 {padding: 10px 20px 20px 20px; position: fixed; bottom: 0px; left: 0px; background: #ffffff; box-shadow: 0px -30px 40px -8px #ffffff; width: 100%; box-sizing: border-box; border-top: 1px solid #e2e2e2;} /* fixed */
+
+.box03 {padding: 20px 25px 25px 25px;}
+.box12 {margin: 10px 0px 20px 0px;}
+.box16 {padding: 6px 25px 25px 25px;}
+
+.text_s {font-size: 12px;}
+.text_ms {font-size: 14px;}
+.text_gray {color: #999999;}
+.text_blue2 {color: #5dc9ff;}
+
+.table12 td, .table12 th {padding: 10px 10px; border-bottom: 1px solid #eaeaea; box-sizing:border-box; line-height: 18px;}
+.table12 th {text-align: left;}
+
+
+/***** colorbox *****/
+.colorbox_top {display: block; position: fixed; top: 0px; background: #ffffff; width: 100%; padding-bottom: 10px; z-index: 30001;}
+.colorbox_bg {background: #ffffff; overflow-y: auto; position: relative; padding-top: 60px; line-height: 22px;}
+.colorbox_bg1 {background: #ffffff; overflow-y: auto; position: relative; line-height: 22px;}
+.colorbox_bg2 {background: #ffffff; overflow-y: auto; position: relative; padding-top: 60px; padding-bottom: 70px; line-height: 20px;}
+.colorbox_title {color: #005394; font-size: 18px; border-bottom: 1px solid #efefef; box-shadow: 0px 2px 0px #fafafa; margin: 0px 25px 0px 25px; padding: 20px 0px 10px 0px; }
+
+.realcontent {font-size: 13px; line-height: 20px; font-family: Arial,'PingFangSC-Light', 'hiragino sans gb', 'microsoft yahei ui', 'microsoft yahei', '微軟正黑體', sans-serif;}
+.realcontent a {color: #0000ee; text-decoration: underline;}
+
+/***** print *****/
+.print {max-width: 800px; margin: 40px auto; font-size: 12px;}
+.print .title {font-size: 18px; color: #3d566e; font-weight: bold; margin-bottom: 20px;}
+.print .event_box.type1 {border: 1px solid #ccd8df; background: #ffffff; border-radius: 2px; padding: 18px;}
+.print .text_ms.text_blue3 {color: #3d566e; font-size: 13px; font-weight: bold; padding: 5px 0px;}
+.print .line01 { height: 1px; background: #eaeaea; font-size: 0px; line-height: 0px; margin: 20px 0px;}
+.print pre {white-space: inherit;}
+

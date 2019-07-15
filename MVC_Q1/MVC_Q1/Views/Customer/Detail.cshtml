@@ -1,0 +1,49 @@
+﻿@model MVC_Q1.Models.DetailModel
+@{
+    ViewBag.Title = "Detail";
+}
+
+<h2>Detail</h2>
+
+<div class="l_margin r_margin">
+    <div class="tab_box">
+        <div class="tab_container">
+            <div id="tab1">
+                <div class="layout07">
+                    @using (Html.BeginForm())
+                    {
+                        @Html.ValidationSummary(true)
+                        @Html.AntiForgeryToken()
+                        <ul class="table10 box03">
+                            <li>
+                                <span style="width: 165px;">Name:</span>
+                                <span>
+                                    @Html.TextBoxFor(model => model.Name)
+                                    @Html.ValidationMessageFor(model => model.Name)
+                                </span>
+                            </li>
+                            <li>
+                                <span>Phone:</span>
+                                <span>
+                                    @Html.TextBoxFor(model => model.Phone)
+                                    @Html.ValidationMessageFor(model => model.Phone)
+                                </span>
+                            </li>
+                            <li>
+                                <span>Email:</span>
+                                <span>
+                                    @Html.TextBoxFor(model => model.Email)
+                                    @Html.ValidationMessageFor(model => model.Email)
+                                </span>
+                            </li>
+                        </ul>
+                        <div class="button_area align_c">
+                            <button type="button" class="button04" onclick="location.href='@Url.Action("Detail")'">Cancel</button>
+                            <button type="submit" class="button02">Submit</button>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
