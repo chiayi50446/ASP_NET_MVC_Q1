@@ -32,22 +32,5 @@ namespace MVC_Q1.Controllers
         {
             return View(TempData["detail"]);
         }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Check(DetailModel data)
-        {
-            if (!Directory.Exists(@"D:\temp\"))
-            {
-                Directory.CreateDirectory(@"D:\temp\");
-            }
-            string fileName = "Detail-" + DateTime.Now.ToString("HHmmssMMddyyyy");
-            StreamWriter sw = new StreamWriter(@"D:\Temp\" + fileName + ".txt");
-            sw.WriteLine("Name : " + data.Name);
-            sw.WriteLine("Phone : " + data.Phone);
-            sw.WriteLine("Email : " + data.Email);
-            sw.Close();
-            return RedirectToAction("Save", "Data");
-        }
     }
 }

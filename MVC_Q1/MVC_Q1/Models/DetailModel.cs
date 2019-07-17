@@ -10,7 +10,7 @@ namespace MVC_Q1.Models
     {
         public string Name { get; set; }
         [StringLength(35)]
-        [RegularExpression(@"^\d+$"
+        [RegularExpression(@"^\d{10}$"
             , ErrorMessage = "Invalid Phone Number"
         )]
         public string Phone { get; set; }
