@@ -10,7 +10,7 @@
         <div class="tab_container">
             <div id="tab1">
                 <div class="layout07">
-                    @using (Html.BeginForm())
+                    @using (Html.BeginForm("Check", "Customer", FormMethod.Post))
                     {
                         @Html.ValidationSummary(true)
                         @Html.AntiForgeryToken()

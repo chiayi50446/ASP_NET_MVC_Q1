@@ -11,26 +11,19 @@ namespace MVC_Q1.Controllers
     public class CustomerController : Controller
     {
         // GET: Customer
-        public new ActionResult Detail()
+        public ActionResult Detail()
         {
             return View();
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public new ActionResult Detail(DetailModel data)
+        public ActionResult Check(DetailModel data)
         {
             if (!ModelState.IsValid)
             {
-                return View(data);
+                return View("Detail", data);
             }
-            TempData["detail"] = data;
-            return RedirectToAction("Check");
-        }
-
-        public ActionResult Check()
-        {
-            return View(TempData["detail"]);
+            return View(data);
         }
     }
 }

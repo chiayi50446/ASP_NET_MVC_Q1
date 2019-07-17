@@ -18,10 +18,4 @@ namespace MVC_Q1.Models
         [EmailAddress]
         public string Email { get; set; }
     }
-
-    public class DetailModelStore
-    {
-        DetailModel detailModel = new DetailModel();
-
-    }
 }

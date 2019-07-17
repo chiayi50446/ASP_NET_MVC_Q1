@@ -10,9 +10,13 @@ namespace MVC_Q1.Controllers
 {
     public class DataController : Controller
     {
-        // GET: Data
+ 
         public ActionResult Save(DetailModel data)
         {
+            if (!ModelState.IsValid)
+            {
+                return View("../Customer/Detail", data);
+            }
             if (!Directory.Exists(@"D:\temp\"))
             {
                 Directory.CreateDirectory(@"D:\temp\");
@@ -23,6 +27,7 @@ namespace MVC_Q1.Controllers
             sw.WriteLine("Phone : " + data.Phone);
             sw.WriteLine("Email : " + data.Email);
             sw.Close();
+            ViewBag.Name = fileName;
             return View();
         }
     }
