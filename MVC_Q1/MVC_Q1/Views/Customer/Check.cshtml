@@ -10,22 +10,36 @@
 
 <h2>Check</h2>
 <div id="tableContainer">
-    <table cellspacing="0" cellpadding="0" class="table03">
-        <tr>
-            <td> Name </td>
-            <td>@Html.DisplayFor(model => model.Name)</td>
-        </tr>
-        <tr>
-            <td> Phone </td>
-            <td>@Html.DisplayFor(model => model.Phone)</td>
-        </tr>
-        <tr>
-            <td> Email </td>
-            <td>@Html.DisplayFor(model => model.Email)</td>
-        </tr>
-    </table>
-    <div class="button_area align_c">
-        <button type="button" class="button02" onclick="javascript:window.history.go(-1);">上一頁</button>
-        <button type="button" class="button02" onclick="location.href='@Url.Action("Save", "Data", data)'">Save</button>
-    </div>
+    @using (Html.BeginForm("Save", "Data", FormMethod.Post))
+    {
+        @Html.ValidationSummary(true)
+        @Html.AntiForgeryToken()
+        <ul class="table10 box03">
+            <li>
+                <span style="width: 165px;">Name:</span>
+                <span>
+                    @Html.TextBoxFor(model => model.Name, new { style = "display: none;" })
+                    @Html.DisplayFor(model => model.Name)
+                </span>
+            </li>
+            <li>
+                <span>Phone:</span>
+                <span>
+                    @Html.TextBoxFor(model => model.Phone, new { style = "display: none;" })
+                    @Html.DisplayFor(model => model.Phone)
+                </span>
+            </li>
+            <li>
+                <span>Email:</span>
+                <span>
+                    @Html.TextBoxFor(model => model.Email, new { style = "display: none;" })
+                    @Html.DisplayFor(model => model.Email)
+                </span>
+            </li>
+        </ul>
+        <div class="button_area align_c">
+            <button type="button" class="button02" onclick="javascript:window.history.go(-1);">上一頁</button>
+            <button type="submit" class="button02">Save</button>
+        </div>
+    }
 </div>

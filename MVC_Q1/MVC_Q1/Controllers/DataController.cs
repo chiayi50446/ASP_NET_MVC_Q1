@@ -10,7 +10,7 @@ namespace MVC_Q1.Controllers
 {
     public class DataController : Controller
     {
- 
+        [HttpPost]
         public ActionResult Save(DetailModel data)
         {
             if (!ModelState.IsValid)
